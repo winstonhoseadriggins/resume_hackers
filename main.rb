@@ -24,20 +24,19 @@ post '/signin' do
 	puts params.inspect
 	user_name = params["name"]
 	user_email = params["email"]
-	user_message = params["message"]
 	api_key = ENV['MANDRILL_APIKEY']
 	m = Mandrill::API.new
 	message = {  
  	:subject=> "your resume_hacker boarding pass",  
  	:from_name=> "resume_hacker",  
- 	:text=> user_message,  
+ 	:text=> "Thanks for your interest in resume_hacker. We'll be in touch soon",  
  	:to=>[  
    {  
      :email=> user_email,  
      :name=> user_name 
    }  
  	],  
- 	:html=>user_message,  
+ 	:html=>"Thanks for your interest in resume_hacker. We'll be in touch soon",  
  	:from_email=>"shawnpatrickdoyle@gmail.com"  
 	}  
 	sending = m.messages.send message  
