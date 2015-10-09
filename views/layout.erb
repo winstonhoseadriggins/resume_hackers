@@ -3,23 +3,31 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title><%= @title %></title>
+	
+<title><%= @title %></title>
+	<link href='https://fonts.googleapis.com/css?family=Cutive+Mono' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" type="text/css" href="/css/style.css">
+
 
 </head>
 
 <body>
+	
 
+	 
 	<%
-		nav = ["Home", "About Us", "Our Products", "Our Services"] 
+		
+		nav = ["home", "about_us", "our_products", "our_services"] 
 		pages = ["/", "about", "products", "services"] 
+
+
 	%>
 
-	<ul style="list-style-type: none; padding-left: 0">
+	<h1 class="greyit">resume_hackers</h1> 
 
 	<!-- start ruby -->	
 	<% nav.each_with_index do |nav_item, nav_index| %>
-		<li style="display:inline-block">
+		<li class="navbar">
 			<a href="<%= pages[nav_index] %>">
 				<%= nav_item %>
 			</a>	
@@ -28,12 +36,13 @@
 	<!-- end ruby -->
 
 	</ul>
+	
 
 	<!-- start ruby -->
 	<%= yield %>	
 	<!-- end ruby -->
-	<hr>
-	<p>footer</p>
+
+	
 
 </body>
 </html>
