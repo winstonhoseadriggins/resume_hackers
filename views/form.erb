@@ -1,10 +1,14 @@
-	<p>Our Form!</p>
+	<p>We offer a free fifteen minute consultation to 
+	give you a chance to learn how we work. Fill in your contact
+	information below and we will be in touch to schedule a time.</p>
 
 
 	<form method="POST" action="/signin">
-		<label for="username">Username</label>
-		<input type="text" name="username">
-		<label for="password">Password</label>
-		<input type="password" name="password">
+		<label for="name">Full name</label><br>
+		<input type="text" name="name"><br>
+		<label for="email">E-mail</label><br>
+		<input type="text" name="email"><br>
+		<label for="message">Let us know a bit about you. How long have you been coding? Where you are interested in working?</label>
+		<textarea type="text" name="message"></textarea><br>
 		<input type="submit">
 	</form>
