@@ -2,44 +2,33 @@
 
 <html lang="en">
 <head>
-
-<meta charset="utf-8">
-  
-  <meta name="description" content="">
-  <meta name="author" content="">
-
-  <!-- Mobile Specific Metas
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <!-- FONT
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
-	
-	
-<title><%= @title %></title>
+	<meta charset="utf-8">
+  	<meta name="description" content="">
+	<meta name="author" content="">
+	<!-- Mobile Specific Metas
+	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- FONT
+	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  	<link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+	<title><%= @title %></title>
 	<link href='https://fonts.googleapis.com/css?family=Cutive+Mono' rel='stylesheet' type='text/css'>
 	<link href='https://fonts.googleapis.com/css?family=Reenie+Beanie' rel='stylesheet' type='text/css'>
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css" rel="stylesheet" />
 	<link rel="stylesheet" type="text/css" href="/css/style.css">
 	<link rel="icon" type="image/png" href="images/favicon.png">
-
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script src="/js/scripts.js"></script>
 </head>
-
 <body>
-	<div class="container">
-
-	 
+<div class="container">
 	<%
-		
 		nav = ["home", "about_us", "our_services", "sign_up"] 
 		pages = ["/", "about", "services","form"] 
-
-
 	%>
 
 	<h1 class="greyit">resume_hackers</h1> 
-
+	<ul style="list-style-type: none; padding-left: 0">
 	<!-- start ruby -->	
 	<% nav.each_with_index do |nav_item, nav_index| %>
 		<li class="navbar">
@@ -49,18 +38,14 @@
 		</li>
 	<% end %>
 	<!-- end ruby -->
-
 	</ul>
 	
-
 	<!-- start ruby -->
 	<%= yield %>	
 	<!-- end ruby -->
-
-	
 	<footer>
-			&copy; resume_hackers
+		&copy; resume_hackers
 	</footer> 
-	</div>
+</div>
 </body>
 </html>

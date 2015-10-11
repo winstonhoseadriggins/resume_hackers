@@ -17,7 +17,7 @@ end
 
 get '/form' do
 	@title = "sign_up"
-	erb :form
+	erb :form 
 end
 
 post '/signin' do
