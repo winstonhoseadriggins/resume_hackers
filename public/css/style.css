@@ -114,7 +114,7 @@ a.navbar:active {
 /*Form page starts*/
 .signup {
 	overflow: auto;
-	background-image: url("/images/form.png");
+	background-image: url("/images/form1.png");
 	background-repeat: no-repeat;
 	background-size: cover;
 }
