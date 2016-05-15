@@ -21,7 +21,6 @@ get '/form' do
 end
 
 post '/signin' do
-	puts params.inspect
 	user_name = params["name"]
 	user_email = params["email"]
 	api_key = ENV['MANDRILL_APIKEY']
